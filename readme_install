@@ -39,6 +39,52 @@ ubuntu@ip-172-31-41-25:~/aptos-core/aptos-move/move-examples/hello_blockchain$ /
 
 
 
+ubuntu@ip-172-31-41-25:~/aptos-core/aptos-move/move-examples/hello_blockchain$ /home/ubuntu/.local/bin/aptos move create-resource-account-and-publish-package --seed 1235 --address-name hello_blockchain  --profile default --named-addresses source_addr=0xfb9b8e6fb8c4d136b5b75375e7ab468f9a1200edda2812c356b54f8c278b8dd7
+Compiling, may take a little while to download git dependencies...
+INCLUDING DEPENDENCY AptosFramework
+INCLUDING DEPENDENCY AptosStdlib
+INCLUDING DEPENDENCY MoveStdlib
+BUILDING Examples
+warning[W09001]: unused alias
+  ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:8:26
+  │
+8 │     use aptos_framework::account;
+  │                          ^^^^^^^ Unused 'use' of alias 'account'. Consider removing it
+
+warning[W09003]: unused assignment
+   ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:59:13
+   │
+59 │         let module_data = borrow_global_mut<ModuleData>(@hello_blockchain);
+   │             ^^^^^^^^^^^ Unused assignment or binding for local 'module_data'. Consider removing, replacing with '_', or prefixing with '_' (e.g., '_module_data')
+
+warning: unused alias
+  ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:8:26
+  │
+8 │     use aptos_framework::account;
+  │                          ^^^^^^^ Unused 'use' of alias 'account'. Consider removing it
+
+warning: unused assignment
+   ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:59:13
+   │
+59 │         let module_data = borrow_global_mut<ModuleData>(@hello_blockchain);
+   │             ^^^^^^^^^^^ Unused assignment or binding for local 'module_data'. Consider removing, replacing with '_', or prefixing with '_' (e.g., '_module_data')
+
+Do you want to publish this package under the resource account's address 0x26703ff155138d3f75cd4d38977ee5b2864721c99cd99aadea39fc923b1868c7? [yes/no] >
+yes
+package size 2299 bytes
+Do you want to submit a transaction for a range of [269500 - 404200] Octas at a gas unit price of 100 Octas? [yes/no] >
+yes
+{
+  "Result": "Success"
+}
+
+
+
+
+
+
+
+
 
 
 

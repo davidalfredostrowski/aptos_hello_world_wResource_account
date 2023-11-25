@@ -99,8 +99,22 @@ yes
 }
 
 
+https://explorer.aptoslabs.com/txn/0x3ed61fa71fedba68f733e9d0fbf679ba96839ee018b10004cbb794ae8270dfa6?network=devnet
+Version: 
+1796094
+Status: 
+Success
 
-
+Sender: 
+Identicon
+0xfb9b…8dd7
+Smart Contract: 
+Identicon
+0x2670…68c7
+Function: 
+message::set_message
+Amount: 
+0 APT
 
 
 

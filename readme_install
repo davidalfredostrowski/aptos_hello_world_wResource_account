@@ -98,6 +98,31 @@ yes
   }
 }
 
+#### one problem  - i cannot read the resource, using the resource account...
+
+pulling in the resouce_account information is not helping either
+
+
+INCLUDING DEPENDENCY AptosFramework
+INCLUDING DEPENDENCY AptosStdlib
+INCLUDING DEPENDENCY MoveStdlib
+BUILDING Examples
+warning[W09001]: unused alias
+  ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:3:14
+  │
+3 │     use std::signer;
+  │              ^^^^^^ Unused 'use' of alias 'signer'. Consider removing it
+
+error[E03002]: unbound module
+   ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:68:28
+   │
+68 │         let account_addr = resource_signer::address_of(&account);
+   │                            ^^^^^^^^^^^^^^^ Unbound module alias 'resource_signer'
+
+{
+  "Error": "Unexpected error: Compilation error"
+}
+
 
 
 https://explorer.aptoslabs.com/txn/0x55f5e906a9338080f0029dbd2df19b6c4563c4a86b7bbcd225c67630d3b24133?network=devnet

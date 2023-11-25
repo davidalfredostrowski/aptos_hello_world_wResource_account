@@ -99,6 +99,9 @@ yes
 }
 
 
+
+https://explorer.aptoslabs.com/txn/0x55f5e906a9338080f0029dbd2df19b6c4563c4a86b7bbcd225c67630d3b24133?network=devnet
+
 https://explorer.aptoslabs.com/txn/0x3ed61fa71fedba68f733e9d0fbf679ba96839ee018b10004cbb794ae8270dfa6?network=devnet
 Version: 
 1796094
@@ -115,6 +118,9 @@ Function:
 message::set_message
 Amount: 
 0 APT
+
+
+
 
 
 

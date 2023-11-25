@@ -13,3 +13,17 @@ sudo apt install python3-pip
 pip3 install aptos-sdk
 git clone https://github.com/aptos-labs/aptos-core.git
 curl -fsSL "https://aptos.dev/scripts/install_cli.py" | python3
+
+
+
+
+
+ubuntu@ip-172-31-41-25:~/aptos-core/aptos-move/move-examples/hello_blockchain$ /home/ubuntu/.local/bin/aptos move create-resource-account-and-publish-package --seed 1235 --address-name hello_blockchain  --profile default --named-addresses source_addr=0xfb9b8e6fb8c4d136b5b75375e7ab468f9a1200edda2812c356b54f8c278b8dd7
+
+
+
+
+
+
+
+

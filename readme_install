@@ -80,6 +80,23 @@ yes
 
 
 
+ubuntu@ip-172-31-41-25:~/aptos-core/aptos-move/move-examples/hello_blockchain$
+/home/ubuntu/.local/bin/aptos move run --function-id '0x26703ff155138d3f75cd4d38977ee5b2864721c99cd99aadea39fc923b1868c7::message::set_message'  --args 'string:hello, blockchain'
+Do you want to submit a transaction for a range of [50300 - 75400] Octas at a gas unit price of 100 Octas? [yes/no] >
+yes
+{
+  "Result": {
+    "transaction_hash": "0x3ed61fa71fedba68f733e9d0fbf679ba96839ee018b10004cbb794ae8270dfa6",
+    "gas_used": 503,
+    "gas_unit_price": 100,
+    "sender": "fb9b8e6fb8c4d136b5b75375e7ab468f9a1200edda2812c356b54f8c278b8dd7",
+    "sequence_number": 1,
+    "success": true,
+    "timestamp_us": 1700952953292846,
+    "version": 1796094,
+    "vm_status": "Executed successfully"
+  }
+}
 
 
 

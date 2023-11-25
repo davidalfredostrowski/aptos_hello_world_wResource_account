@@ -14,6 +14,22 @@ pip3 install aptos-sdk
 git clone https://github.com/aptos-labs/aptos-core.git
 curl -fsSL "https://aptos.dev/scripts/install_cli.py" | python3
 
+ubuntu@ip-172-31-41-25:~/aptos-core/aptos-move/move-examples/hello_blockchain$ /home/ubuntu/.local/bin/aptos  init
+Configuring for profile default
+Choose network from [devnet, testnet, mainnet, local, custom | defaults to devnet]
+
+No network given, using devnet...
+Enter your private key as a hex literal (0x...) [Current: None | No input: Generate new key (or keep one if present)]
+
+No key given, generating key...
+Account 0xfb9b8e6fb8c4d136b5b75375e7ab468f9a1200edda2812c356b54f8c278b8dd7 doesn't exist, creating it and funding it with 100000000 Octas
+Account 0xfb9b8e6fb8c4d136b5b75375e7ab468f9a1200edda2812c356b54f8c278b8dd7 funded successfully
+
+---
+Aptos CLI is now set up for account 0xfb9b8e6fb8c4d136b5b75375e7ab468f9a1200edda2812c356b54f8c278b8dd7 as profile default!  Run `aptos --help` for more information about commands
+{
+  "Result": "Success"
+}
 
 
 

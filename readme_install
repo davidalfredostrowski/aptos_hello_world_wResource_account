@@ -14,22 +14,107 @@ pip3 install aptos-sdk
 git clone https://github.com/aptos-labs/aptos-core.git
 curl -fsSL "https://aptos.dev/scripts/install_cli.py" | python3
 
+
+
+
+
+
+
 ubuntu@ip-172-31-41-25:~/aptos-core/aptos-move/move-examples/hello_blockchain$ /home/ubuntu/.local/bin/aptos  init
+Aptos already initialized for profile default, do you want to overwrite the existing config? [yes/no] >
+yes
 Configuring for profile default
 Choose network from [devnet, testnet, mainnet, local, custom | defaults to devnet]
 
 No network given, using devnet...
-Enter your private key as a hex literal (0x...) [Current: None | No input: Generate new key (or keep one if present)]
+Enter your private key as a hex literal (0x...) [Current: Redacted | No input: Generate new key (or keep one if present)]
 
-No key given, generating key...
-Account 0xfb9b8e6fb8c4d136b5b75375e7ab468f9a1200edda2812c356b54f8c278b8dd7 doesn't exist, creating it and funding it with 100000000 Octas
-Account 0xfb9b8e6fb8c4d136b5b75375e7ab468f9a1200edda2812c356b54f8c278b8dd7 funded successfully
+0xfb9b8e6fb8c4d136b5b75375e7ab468f9a1200edda2812c356b54f8c278b8dd8No key given, keeping existing key...
+Account 0xfb9b8e6fb8c4d136b5b75375e7ab468f9a1200edda2812c356b54f8c278b8dd7 has been already found onchain
 
----
-Aptos CLI is now set up for account 0xfb9b8e6fb8c4d136b5b75375e7ab468f9a1200edda2812c356b54f8c278b8dd7 as profile default!  Run `aptos --help` for more information about commands
+
+
+
+
+
+
+
+ /home/ubuntu/.local/bin/aptos move create-resource-account-and-publish-package --seed 6235 --address-name hello_blockchain --profile default --named-addresses source_addr=0xfb9b8e6fb8c4d136b5b75375e7ab468f9a1200edda2812c356b54f8c278b8dd7
+Compiling, may take a little while to download git dependencies...
+INCLUDING DEPENDENCY AptosFramework
+INCLUDING DEPENDENCY AptosStdlib
+INCLUDING DEPENDENCY MoveStdlib
+BUILDING Examples
+warning[W09001]: unused alias
+  ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:3:14
+  │
+3 │     use std::signer;
+  │              ^^^^^^ Unused 'use' of alias 'signer'. Consider removing it
+
+warning[W09001]: unused alias
+  ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:5:26
+  │
+5 │     use aptos_framework::event;
+  │                          ^^^^^ Unused 'use' of alias 'event'. Consider removing it
+
+warning[W09002]: unused variable
+   ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:53:34
+   │
+53 │     public entry fun set_message(account: signer, message: string::String)
+   │                                  ^^^^^^^ Unused parameter 'account'. Consider removing or prefixing with an underscore: '_account'
+
+warning: unused alias
+  ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:5:26
+  │
+5 │     use aptos_framework::event;
+  │                          ^^^^^ Unused 'use' of alias 'event'. Consider removing it
+
+warning: unused alias
+  ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:3:14
+  │
+3 │     use std::signer;
+  │              ^^^^^^ Unused 'use' of alias 'signer'. Consider removing it
+
+warning: unused variable
+   ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:53:34
+   │
+53 │     public entry fun set_message(account: signer, message: string::String)
+   │                                  ^^^^^^^ Unused parameter 'account'. Consider removing or prefixing with an underscore: '_account'
+
+Do you want to publish this package under the resource account's address 0x02e5557969da61292929315ea998124fd1f7abb38b43cbbf53e586cbdcbafaa0? [yes/no] >
+yes
+package size 2369 bytes
+Do you want to submit a transaction for a range of [277400 - 416100] Octas at a gas unit price of 100 Octas? [yes/no] >
+yes
 {
   "Result": "Success"
 }
+
+
+ubuntu@ip-172-31-41-25:~/aptos-core/aptos-move/move-examples/hello_blockchain$ /home/ubuntu/.local/bin/aptos move run  --function-id '0x02e5557969da61292929315ea998124fd1f7abb38b43cbbf53e586cbdcbafaa0::message::set_message' --args 'string:hello, blockchain'
+Do you want to submit a transaction for a range of [50300 - 75400] Octas at a gas unit price of 100 Octas? [yes/no] >
+yes
+{
+  "Result": {
+    "transaction_hash": "0x731723fda9f2d3da1afee66a03cd63249f1c5898b35d2a07c445583fda2e24cb",
+    "gas_used": 503,
+    "gas_unit_price": 100,
+    "sender": "fb9b8e6fb8c4d136b5b75375e7ab468f9a1200edda2812c356b54f8c278b8dd7",
+    "sequence_number": 7,
+    "success": true,
+    "timestamp_us": 1701040800923651,
+    "version": 2447416,
+    "vm_status": "Executed successfully"
+  }
+}
+
+
+
+https://fullnode.devnet.aptoslabs.com/v1/accounts/02e5557969da61292929315ea998124fd1f7abb38b43cbbf53e586cbdcbafaa0/resource/0x02e5557969da61292929315ea998124fd1f7abb38b43cbbf53e586cbdcbafaa0::message::MessageHolder
+
+{"type":"0x2e5557969da61292929315ea998124fd1f7abb38b43cbbf53e586cbdcbafaa0::message::MessageHolder","data":{"message":"hello, blockchain"}}
+
+
 
 
 

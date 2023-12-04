@@ -33,80 +33,33 @@ Enter your private key as a hex literal (0x...) [Current: Redacted | No input: G
 Account 0xfb9b8e6fb8c4d136b5b75375e7ab468f9a1200edda2812c356b54f8c278b8dd7 has been already found onchain
 
 
-
-
-
-
-
-
- /home/ubuntu/.local/bin/aptos move create-resource-account-and-publish-package --seed 6235 --address-name hello_blockchain --profile default --named-addresses source_addr=0xfb9b8e6fb8c4d136b5b75375e7ab468f9a1200edda2812c356b54f8c278b8dd7
+ubuntu@ip-172-31-41-15:~/aptos-core/aptos-move/move-examples/hello_blockchain$
+ /home/ubuntu/.local/bin/aptos move create-resource-account-and-publish-package --seed 62357 --address-name hello_blockchain --profile default --named-addresses source_addr=0xa286b9e594f7f5fae0aab9f764abc58ab54c9a6575ee63fd43cf9c0bd20ab8a1
 Compiling, may take a little while to download git dependencies...
 INCLUDING DEPENDENCY AptosFramework
 INCLUDING DEPENDENCY AptosStdlib
 INCLUDING DEPENDENCY MoveStdlib
 BUILDING Examples
-warning[W09001]: unused alias
-  ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:3:14
-  │
-3 │     use std::signer;
-  │              ^^^^^^ Unused 'use' of alias 'signer'. Consider removing it
-
-warning[W09001]: unused alias
-  ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:5:26
-  │
-5 │     use aptos_framework::event;
-  │                          ^^^^^ Unused 'use' of alias 'event'. Consider removing it
-
-warning[W09002]: unused variable
-   ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:53:34
-   │
-53 │     public entry fun set_message(account: signer, message: string::String)
-   │                                  ^^^^^^^ Unused parameter 'account'. Consider removing or prefixing with an underscore: '_account'
-
-warning: unused alias
-  ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:5:26
-  │
-5 │     use aptos_framework::event;
-  │                          ^^^^^ Unused 'use' of alias 'event'. Consider removing it
-
-warning: unused alias
-  ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:3:14
-  │
-3 │     use std::signer;
-  │              ^^^^^^ Unused 'use' of alias 'signer'. Consider removing it
-
-warning: unused variable
-   ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:53:34
-   │
-53 │     public entry fun set_message(account: signer, message: string::String)
-   │                                  ^^^^^^^ Unused parameter 'account'. Consider removing or prefixing with an underscore: '_account'
-
-Do you want to publish this package under the resource account's address 0x02e5557969da61292929315ea998124fd1f7abb38b43cbbf53e586cbdcbafaa0? [yes/no] >
+Do you want to publish this package under the resource account's address 0xbac9c9d1e3553463e5ac0321942871e70673d4758b436324a874b1aff19c15e0? [yes/no] >
 yes
-package size 2369 bytes
-Do you want to submit a transaction for a range of [277400 - 416100] Octas at a gas unit price of 100 Octas? [yes/no] >
+package size 2569 bytes
+Do you want to submit a transaction for a range of [283300 - 424900] Octas at a gas unit price of 100 Octas? [yes/no] >
 yes
 {
   "Result": "Success"
 }
 
 
+
+
 ubuntu@ip-172-31-41-25:~/aptos-core/aptos-move/move-examples/hello_blockchain$ /home/ubuntu/.local/bin/aptos move run  --function-id '0x02e5557969da61292929315ea998124fd1f7abb38b43cbbf53e586cbdcbafaa0::message::set_message' --args 'string:hello, blockchain'
 Do you want to submit a transaction for a range of [50300 - 75400] Octas at a gas unit price of 100 Octas? [yes/no] >
 yes
 {
-  "Result": {
-    "transaction_hash": "0x731723fda9f2d3da1afee66a03cd63249f1c5898b35d2a07c445583fda2e24cb",
-    "gas_used": 503,
-    "gas_unit_price": 100,
-    "sender": "fb9b8e6fb8c4d136b5b75375e7ab468f9a1200edda2812c356b54f8c278b8dd7",
-    "sequence_number": 7,
-    "success": true,
-    "timestamp_us": 1701040800923651,
-    "version": 2447416,
-    "vm_status": "Executed successfully"
-  }
-}
+
+
+
+
 
 
 
@@ -114,176 +67,6 @@ https://fullnode.devnet.aptoslabs.com/v1/accounts/02e5557969da61292929315ea99812
 
 {"type":"0x2e5557969da61292929315ea998124fd1f7abb38b43cbbf53e586cbdcbafaa0::message::MessageHolder","data":{"message":"hello, blockchain"}}
 
-
-
-
-
-
-ubuntu@ip-172-31-41-25:~/aptos-core/aptos-move/move-examples/hello_blockchain$ /home/ubuntu/.local/bin/aptos move create-resource-account-and-publish-package --seed 1235 --address-name hello_blockchain  --profile default --named-addresses source_addr=0xfb9b8e6fb8c4d136b5b75375e7ab468f9a1200edda2812c356b54f8c278b8dd7
-
-
-
-
-ubuntu@ip-172-31-41-25:~/aptos-core/aptos-move/move-examples/hello_blockchain$ /home/ubuntu/.local/bin/aptos move create-resource-account-and-publish-package --seed 1235 --address-name hello_blockchain  --profile default --named-addresses source_addr=0xfb9b8e6fb8c4d136b5b75375e7ab468f9a1200edda2812c356b54f8c278b8dd7
-Compiling, may take a little while to download git dependencies...
-INCLUDING DEPENDENCY AptosFramework
-INCLUDING DEPENDENCY AptosStdlib
-INCLUDING DEPENDENCY MoveStdlib
-BUILDING Examples
-warning[W09001]: unused alias
-  ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:8:26
-  │
-8 │     use aptos_framework::account;
-  │                          ^^^^^^^ Unused 'use' of alias 'account'. Consider removing it
-
-warning[W09003]: unused assignment
-   ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:59:13
-   │
-59 │         let module_data = borrow_global_mut<ModuleData>(@hello_blockchain);
-   │             ^^^^^^^^^^^ Unused assignment or binding for local 'module_data'. Consider removing, replacing with '_', or prefixing with '_' (e.g., '_module_data')
-
-warning: unused alias
-  ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:8:26
-  │
-8 │     use aptos_framework::account;
-  │                          ^^^^^^^ Unused 'use' of alias 'account'. Consider removing it
-
-warning: unused assignment
-   ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:59:13
-   │
-59 │         let module_data = borrow_global_mut<ModuleData>(@hello_blockchain);
-   │             ^^^^^^^^^^^ Unused assignment or binding for local 'module_data'. Consider removing, replacing with '_', or prefixing with '_' (e.g., '_module_data')
-
-Do you want to publish this package under the resource account's address 0x26703ff155138d3f75cd4d38977ee5b2864721c99cd99aadea39fc923b1868c7? [yes/no] >
-yes
-package size 2299 bytes
-Do you want to submit a transaction for a range of [269500 - 404200] Octas at a gas unit price of 100 Octas? [yes/no] >
-yes
-{
-  "Result": "Success"
-}
-
-
-
-ubuntu@ip-172-31-41-25:~/aptos-core/aptos-move/move-examples/hello_blockchain$
-/home/ubuntu/.local/bin/aptos move run --function-id '0x26703ff155138d3f75cd4d38977ee5b2864721c99cd99aadea39fc923b1868c7::message::set_message'  --args 'string:hello, blockchain'
-Do you want to submit a transaction for a range of [50300 - 75400] Octas at a gas unit price of 100 Octas? [yes/no] >
-yes
-{
-  "Result": {
-    "transaction_hash": "0x3ed61fa71fedba68f733e9d0fbf679ba96839ee018b10004cbb794ae8270dfa6",
-    "gas_used": 503,
-    "gas_unit_price": 100,
-    "sender": "fb9b8e6fb8c4d136b5b75375e7ab468f9a1200edda2812c356b54f8c278b8dd7",
-    "sequence_number": 1,
-    "success": true,
-    "timestamp_us": 1700952953292846,
-    "version": 1796094,
-    "vm_status": "Executed successfully"
-  }
-}
-
-#### one problem  - i cannot read the resource, using the resource account...
-
-pulling in the resouce_account information is not helping either
-
-
-INCLUDING DEPENDENCY AptosFramework
-INCLUDING DEPENDENCY AptosStdlib
-INCLUDING DEPENDENCY MoveStdlib
-BUILDING Examples
-warning[W09001]: unused alias
-  ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:3:14
-  │
-3 │     use std::signer;
-  │              ^^^^^^ Unused 'use' of alias 'signer'. Consider removing it
-
-error[E03002]: unbound module
-   ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:68:28
-   │
-68 │         let account_addr = resource_signer::address_of(&account);
-   │                            ^^^^^^^^^^^^^^^ Unbound module alias 'resource_signer'
-
-{
-  "Error": "Unexpected error: Compilation error"
-}
-
-
-
-https://explorer.aptoslabs.com/txn/0x55f5e906a9338080f0029dbd2df19b6c4563c4a86b7bbcd225c67630d3b24133?network=devnet
-
-https://explorer.aptoslabs.com/txn/0x3ed61fa71fedba68f733e9d0fbf679ba96839ee018b10004cbb794ae8270dfa6?network=devnet
-Version: 
-1796094
-Status: 
-Success
-
-Sender: 
-Identicon
-0xfb9b…8dd7
-Smart Contract: 
-Identicon
-0x2670…68c7
-Function: 
-message::set_message
-Amount: 
-0 APT
-
-######## problem with creating account on a claimed account - reset the seed!
-
-
-
-ubuntu@ip-172-31-41-25:~/aptos-core/aptos-move/move-examples/hello_blockchain$ /home/ubuntu/.local/bin/aptos move create-resource-account-and-publish-package --seed 1235 --address-name hello_blockchain --profile default --named-addresses source_addr=0xfb9b8e6fb8c4d136b5b75375e7ab468f9a1200edda2812c356b54f8c278b8dd7
-Compiling, may take a little while to download git dependencies...
-INCLUDING DEPENDENCY AptosFramework
-INCLUDING DEPENDENCY AptosStdlib
-INCLUDING DEPENDENCY MoveStdlib
-BUILDING Examples
-warning[W09001]: unused alias
-  ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:8:26
-  │
-8 │     use aptos_framework::account;
-  │                          ^^^^^^^ Unused 'use' of alias 'account'. Consider removing it
-
-warning: unused alias
-  ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:8:26
-  │
-8 │     use aptos_framework::account;
-  │                          ^^^^^^^ Unused 'use' of alias 'account'. Consider removing it
-
-Do you want to publish this package under the resource account's address 0x26703ff155138d3f75cd4d38977ee5b2864721c99cd99aadea39fc923b1868c7? [yes/no] >
-yes
-package size 2249 bytes
-{
-  "Error": "Simulation failed with status: Move abort in 0x1::account: ERESOURCE_ACCCOUNT_EXISTS(0x8000f): An attempt to create a resource account on a claimed account"
-}
-ubuntu@ip-172-31-41-25:~/aptos-core/aptos-move/move-examples/hello_blockchain$ /home/ubuntu/.local/bin/aptos move create-resource-account-and-publish-package --seed 5235 --address-name hello_blockchain --profile default --named-addresses source_addr=0xfb9b8e6fb8c4d136b5b75375e7ab468f9a1200edda2812c356b54f8c278b8dd7
-Compiling, may take a little while to download git dependencies...
-INCLUDING DEPENDENCY AptosFramework
-INCLUDING DEPENDENCY AptosStdlib
-INCLUDING DEPENDENCY MoveStdlib
-BUILDING Examples
-warning[W09001]: unused alias
-  ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:8:26
-  │
-8 │     use aptos_framework::account;
-  │                          ^^^^^^^ Unused 'use' of alias 'account'. Consider removing it
-
-warning: unused alias
-  ┌─ /home/ubuntu/aptos-core/aptos-move/move-examples/hello_blockchain/sources/hello_blockchain.move:8:26
-  │
-8 │     use aptos_framework::account;
-  │                          ^^^^^^^ Unused 'use' of alias 'account'. Consider removing it
-
-Do you want to publish this package under the resource account's address 0x97c0fb3a3950175b25b7a69a72856fdf9fb46d3d20c280f8d75edbb29ddfae45? [yes/no] >
-yes
-package size 2249 bytes
-Do you want to submit a transaction for a range of [267900 - 401800] Octas at a gas unit price of 100 Octas? [yes/no] >
-yes
-{
-  "Result": "Success"
-}
-ubuntu@ip-172-31-41-25:~/aptos-core/aptos-move/move-examples/hello_blockchain$
 
 
 

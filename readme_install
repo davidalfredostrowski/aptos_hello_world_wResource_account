@@ -59,15 +59,16 @@ yes
 
 
 
-
-
-
-
 https://fullnode.devnet.aptoslabs.com/v1/accounts/02e5557969da61292929315ea998124fd1f7abb38b43cbbf53e586cbdcbafaa0/resource/0x02e5557969da61292929315ea998124fd1f7abb38b43cbbf53e586cbdcbafaa0::message::MessageHolder
 
 {"type":"0x2e5557969da61292929315ea998124fd1f7abb38b43cbbf53e586cbdcbafaa0::message::MessageHolder","data":{"message":"hello, blockchain"}}
 
 
+
+ubuntu@ip-172-31-41-15:~/aptos-core/aptos-move/move-examples/hello_blockchain$
+/home/ubuntu/.local/bin/aptos move run  --function-id '0xbac9c9d1e3553463e5ac0321942871e70673d4758b436324a874b1aff19c15e0::message::set_message_two' --args 'string:hello, blockchain two'
+{
+  "Error": "Simulation failed with status: Execution failed in 0xbac9c9d1e3553463e5ac0321942871e70673d4758b436324a874b1aff19c15e0::message::set_message_two at code offset 15\nExecution failed with status: Failed to move resource into bac9c9d1e3553463e5ac0321942871e70673d4758b436324a874b1aff19c15e0"
 
 
 

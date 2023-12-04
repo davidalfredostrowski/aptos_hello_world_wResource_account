@@ -18,7 +18,7 @@ curl -fsSL "https://aptos.dev/scripts/install_cli.py" | python3
 
 
 
-
+cd /aptos-core/aptos-move/move-examples/hello_blockchain
 
 ubuntu@ip-172-31-41-25:~/aptos-core/aptos-move/move-examples/hello_blockchain$ /home/ubuntu/.local/bin/aptos  init
 Aptos already initialized for profile default, do you want to overwrite the existing config? [yes/no] >
